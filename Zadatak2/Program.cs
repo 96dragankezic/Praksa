@@ -8,13 +8,23 @@ namespace Zadatak2
 {
     internal class Program
     {
-        public static void straniceCineTrougao(double a, double b, double c)
+        public static bool straniceCineTrougao(int a, int b, int c)
         {
-            Math.Max(a, b, c);
+            int max = Math.Max(a, Math.Max(b,c));
+            bool cineTrougao = false;
+
+            if (max == c && a + b > c)
+                cineTrougao = true;
+            else if(max == b && a + c > b)
+                cineTrougao = true;
+            else if(max == a && b + c > a)
+                cineTrougao = true;
+
+            return cineTrougao;
         }
         static void Main(string[] args)
         {
-            double a, b, c;
+            int a, b, c;
             while (true)
             {
                 Console.WriteLine("Uneti duzine stranca trougla...");
@@ -22,7 +32,7 @@ namespace Zadatak2
                 while(true)
                 {
                     Console.Write("Stranica a: ");
-                    if(double.TryParse(Console.ReadLine(), out a) ) 
+                    if(int.TryParse(Console.ReadLine(), out a) ) 
                     {
                         if(a > 0)
                             break;
@@ -31,7 +41,7 @@ namespace Zadatak2
                 while (true)
                 {
                     Console.Write("Stranica b: ");
-                    if (double.TryParse(Console.ReadLine(), out b))
+                    if (int.TryParse(Console.ReadLine(), out b))
                     {
                         if (b > 0)
                             break;
@@ -40,12 +50,16 @@ namespace Zadatak2
                 while (true)
                 {
                     Console.Write("Stranica c: ");
-                    if (double.TryParse(Console.ReadLine(), out c))
+                    if (int.TryParse(Console.ReadLine(), out c))
                     {
                         if (c > 0)
                             break;
                     }
                 }
+                if (straniceCineTrougao(a, b, c))
+                    Console.WriteLine("Stranice cine trougao!");
+                else
+                    Console.WriteLine("Stranice ne cine trougao!");
 
             }
 
