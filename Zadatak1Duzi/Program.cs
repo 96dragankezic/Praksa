@@ -31,8 +31,6 @@ namespace Zadatak1Duzi
             }
 
             Console.ReadKey();
-            //Library.Class1 library = new Library.Class1();
-            //library.funkcija();
         }
     }
 }
