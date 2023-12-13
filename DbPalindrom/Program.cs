@@ -12,12 +12,25 @@ namespace DbPalindrom
         static void Main(string[] args)
         {
             const string connectionString = "Data Source=DESKTOP-U8FHNKB\\SQLEXPRESS;Initial Catalog=Palindromes;Integrated Security=True";
+            const string queryStringDelete = "DELETE FROM Palindromes";
             const string queryString = "SELECT * FROM Candidates";
 
 
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString, connection);
+                SqlCommand command = new SqlCommand(queryStringDelete, connection);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                connection.Close();
+
+                command = new SqlCommand(queryString, connection);
 
                 try
                 {
@@ -33,6 +46,7 @@ namespace DbPalindrom
                 {
                     Console.WriteLine(ex.Message);
                 }
+                connection.Close();
                 Console.ReadKey();
             }
         }
