@@ -13,14 +13,7 @@ namespace Zadatak1Duzi
         {
             Console.WriteLine("Unesite recenicu za proveru da li je palindrom: ");
             string recenica = Console.ReadLine();
-            recenica = recenica.Trim('.', '!', '?', ' ', ',');
-            string[] reci = recenica.Split(' ', ',');
-            recenica = "";
-            for(int i = 0; i < reci.Length; i++)
-            {
-                recenica += reci[i];
-            }
-            recenica.ToLower();
+            
             if (Library.Class1.funkcijaPalindrom(recenica))
             {
                 Console.WriteLine("Jeste palindrom!");
