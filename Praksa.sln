@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak1Duzi", "Zadatak1Duz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{6DD0EAAC-B5D3-4C64-A4A7-B29DBA789B52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbPalindrom", "DbPalindrom\DbPalindrom.csproj", "{FF873284-B5EF-42E0-9452-500A29AA7D4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{6DD0EAAC-B5D3-4C64-A4A7-B29DBA789B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DD0EAAC-B5D3-4C64-A4A7-B29DBA789B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD0EAAC-B5D3-4C64-A4A7-B29DBA789B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF873284-B5EF-42E0-9452-500A29AA7D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF873284-B5EF-42E0-9452-500A29AA7D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF873284-B5EF-42E0-9452-500A29AA7D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF873284-B5EF-42E0-9452-500A29AA7D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
