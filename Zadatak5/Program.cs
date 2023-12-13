@@ -10,19 +10,22 @@ namespace Zadatak5
     {
         static void Main(string[] args)
         {
-            double bazen, pumpa, isticanje;
+            double bazen, pumpa, isticanje, vremeUSec;
 
-            Console.Write("X: ");
+            Console.Write("Zapremina bazena u L: ");
             bazen = int.Parse(Console.ReadLine());
             
-            Console.Write("Y: ");
+            Console.Write("Pumpa L/min: ");
             pumpa = int.Parse(Console.ReadLine());
             
-            Console.Write("Z: ");
+            Console.Write("Isticanje L/min: ");
             isticanje = int.Parse(Console.ReadLine());
 
+            vremeUSec = bazen / ((pumpa - isticanje)/60);
+            
+
             if (pumpa > isticanje)
-                Console.WriteLine($"Bazen(L): {bazen} \nPumpa(L/min): {pumpa} \nIsticanje(L/min): {isticanje} \nBazen ce se napuniti za {bazen/(pumpa - isticanje)} minuta");
+                Console.WriteLine($"Bazen(L): {bazen} \nPumpa(L/min): {pumpa} \nIsticanje(L/min): {isticanje} \nBazen ce se napuniti za {(int)vremeUSec/60} minuta i {(int)vremeUSec%60} sekundi");
             else
                 Console.WriteLine("Bazen se nece napuniti jer je brzina isticanja veca od brzine pumpanja!");
 
