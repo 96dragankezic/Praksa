@@ -8,6 +8,14 @@ namespace Zadatak4
 {
     internal class Program
     {
+        // DM: Nešto nije u redu sa algoritmom
+        //Unesi apoene:
+        //100,200
+        //Unesi iznos za isplatu:
+        //200
+        //Apoen 100: 2
+        //Dodjem vam jos 0 :)
+
         static void Main(string[] args)
         {
             Console.WriteLine("Unesi apoene: ");

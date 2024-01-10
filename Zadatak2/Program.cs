@@ -12,7 +12,8 @@ namespace Zadatak2
         {
             int max = Math.Max(a, Math.Max(b,c));
             bool cineTrougao = false;
-
+            // DM: Funkcija radi ispravno, ali ne zadovoljava uslov zadatka.
+            // Uslov u zadatku je bio da bude samo jedna provera (if, ? :, case, ...) a ovde ih ima tri.
             if (max == c && a + b > c)
                 cineTrougao = true;
             else if(max == b && a + c > b)

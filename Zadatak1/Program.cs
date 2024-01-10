@@ -19,6 +19,11 @@ namespace Zadatak1
             
             return rez;
         }
+        // DM: Šta će ova funkcija da vrati ako joj se prosledi 0?   Po konvenciji: 0! = 1
+        // a radi sigurnosti izvršavanja funkcije dobro je obraditi i slučaj negativnog broja,
+        // pošto nema definicije za taj slučaj onda može na isti način kao i slučaj 0, npr: -3! = 1 .
+        // Nema veze što je u Main funkciji osigurano da se funkciji neće proslediti negativan broj ili 0,
+        // "sutra" ćeš tu funkciju da upotrebiš (prekopiraš) na drugom mestu i eto problema
         public static int izracunajFaktorijelRekurzivno(int brojFakt)
         {
             int rez = brojFakt;
