@@ -33,7 +33,7 @@ namespace Zadatak4
 
             for(int i = 0; i < apoeni.Length; i++)
             {
-                if (iznosIsplata > apoeniInt[i])
+                if (iznosIsplata >= apoeniInt[i])
                 {
                     Console.WriteLine("Apoen " + apoeniInt[i] + ": " + iznosIsplata / apoeniInt[i]);
                     iznosIsplata -= iznosIsplata / apoeniInt[i] * apoeniInt[i];
