@@ -28,7 +28,7 @@ namespace Zadatak1
         {
             int rez = brojFakt;
 
-            if (brojFakt == 1)
+            if (brojFakt == 1 || brojFakt <= 0)
                 return 1;
             rez *= izracunajFaktorijelRekurzivno(brojFakt - 1); 
             
@@ -43,11 +43,8 @@ namespace Zadatak1
                 Console.Write("Unesite broj za izracunavanje faktorijela: ");
                 if (int.TryParse(Console.ReadLine(), out brojFakt))
                 {
-                    if (brojFakt > 0)
-                    {
-                        Console.WriteLine("Faktorijel unetog broja " + brojFakt + " normalno je: " + izracunajFaktorijel(brojFakt));
-                        Console.WriteLine("Faktorijel unetog broja " + brojFakt + " rekurzijom je: " + izracunajFaktorijelRekurzivno(brojFakt) + "\n");
-                    }
+                    Console.WriteLine("Faktorijel unetog broja " + brojFakt + " normalno je: " + izracunajFaktorijel(brojFakt));
+                    Console.WriteLine("Faktorijel unetog broja " + brojFakt + " rekurzijom je: " + izracunajFaktorijelRekurzivno(brojFakt) + "\n");
                 }
             }
         }
