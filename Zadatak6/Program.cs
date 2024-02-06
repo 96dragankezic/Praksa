@@ -15,27 +15,54 @@ namespace Zadatak6
         static void Main(string[] args)
         {
             char[] rec = { 'b', 'a', 'r', 'b', 'a', 'r', 'a' };
+            int nadjenPuta = 0;
 
             while(true) 
             {          
                 for(int i = 0; i < rec.Length; i++) 
                 {
                     Console.Write("Unesite slovo: ");
-                    if (rec[i] == char.Parse(Console.ReadLine()))
+                    if (rec[i] == Console.ReadKey().KeyChar)
                     {
-                        if (rec.Length - 1 == i)
+                        //ako je nadjena rec "bar"
+                        if (i == 2)
                         {
-                            Console.WriteLine("Uneli ste rec barbara!");
+                            nadjenPuta++;
+                            if (nadjenPuta == 1)
+                            {
+                                i = -1;
+                            }
+                            else if (nadjenPuta == 2) 
+                            {
+                                Console.Write("\nUnesite slovo: ");
+                                char slovo = Console.ReadKey().KeyChar;
+                                if ('a' == slovo)
+                                {
+                                    Console.WriteLine("\nUneli ste rec barbara!");
+                                    nadjenPuta = 0;
+                                    i = -1;
+                                }
+                                if('b' == slovo)
+                                {
+                                    nadjenPuta = 1;
+                                    i = 0; 
+                                }
+                                else
+                                {
+                                    nadjenPuta = 0;
+                                    i = -1;
+                                }
+                            }  
                         }
+                        Console.WriteLine();
                     }
                     else
                     {
-                        break;
+                        Console.WriteLine();
+                        i = -1;
                     }        
                 }
             }
-
-            Console.ReadKey();
         }
     }
 }
